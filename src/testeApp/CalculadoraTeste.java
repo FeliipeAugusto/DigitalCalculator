@@ -8,111 +8,77 @@ import calculadoraDigital.Calculadora;
 
 public class CalculadoraTeste {
 
-	 /** 
+    /**
+     * Teste de somar na Calculadora.
+     */
+    @Test
+    public void testeSomar5com5() {
+        double nro1 = 5;
+        double nro2 = 5;
 
-	    * Teste de somar na Calculadora. 
+        Calculadora calc = new Calculadora();
 
-	    */ 
+        double resultadoEsperado = 10;
+        double resultadoReal = calc.somar(nro1, nro2);
 
-	   @Test 
+        assertEquals(resultadoEsperado, resultadoReal, 0.001);
+    }
 
-	   public void testeSomar5com5() { 
-	       
+    /**
+     * Teste de subtrair na Calculadora.
+     */
+    @Test
+    public void testeSubtrair3de5() {
+        double nro1 = 5;
+        double nro2 = 3;
 
-	   int nro1 = 5; 
+        Calculadora calc = new Calculadora();
 
-	   int nro2 = 5; 
+        double resultadoEsperado = 2;
+        double resultadoReal = calc.subtrair(nro1, nro2);
 
-	       Calculadora calc= new Calculadora(); 
+        assertEquals(resultadoEsperado, resultadoReal, 0.001);
+    }
 
-	       int resultadoEsperado = 10; 
+    /**
+     * Teste de multiplicar na Calculadora.
+     */
+    @Test
+    public void testeMultiplicar3por3() {
+        int nro1 = 3;
+        int nro2 = 3;
 
-	       int resultadoReal= calc.somar(nro1, nro2);       
+        Calculadora calc = new Calculadora();
 
-	       assertEquals(resultadoEsperado, resultadoReal); 
+        double resultadoEsperado = 9;
+        double resultadoReal = calc.multiplicar(nro1, nro2);
 
-	   } 
+        assertEquals(resultadoEsperado, resultadoReal, 0.001);
+    }
 
-	 
+    /**
+     * Teste de dividir na Calculadora.
+     */
+    @Test
+    public void testeDividir3por7() {
+        double nro1 = 3;
+        double nro2 = 7;
 
-	   /** 
+        Calculadora calc = new Calculadora();
 
-	   * Teste de subtrair na  Calculadora. 
+        double resultadoEsperado = 0.428571;
+        double resultadoReal = calc.dividir(nro1, nro2);
 
-	   */ 
-
-	  @Test 
-
-	  public void testeSubtrair3de5() { 
-
-
-	  int nro1 = 5; 
-
-	  int nro2 = 3; 
-
-	      Calculadora calc = new Calculadora(); 
-
-	      int resultadoEsperado= 2; 
-
-	      int resultadoReal= calc.subtrair(nro1, nro2); 
-
-	      assertEquals(resultadoEsperado, resultadoReal);   
-
-	  } 
-
-	   
-
-	   /** 
-
-	   * Teste de multiplicar na Calculadora. 
-
-	   */ 
-
-	   @Test 
-
-	   public void testeMultiplicar3por3() { 
-
-
-	   int nro1 = 3; 
-
-	   int nro2 = 3; 
-
-	       Calculadora calc = new Calculadora(); 
-
-	       int resultadoEsperado = 9; 
-
-	       int resultadoReal = calc.multiplicar(nro1, nro2); 
-
-	       assertEquals(resultadoEsperado, resultadoReal); 
-
-	   } 
-
-	 
-
-	   /** 
-
-	   * Teste de dividir na Calculadora. 
-
-	   */ 
-
-	  @Test 
-
-	  public void testeDividir3por2() { 
- 
-
-	  int nro1 = 3; 
-
-	  int nro2 = 2; 
-
-	      Calculadora calc = new Calculadora(); 
-
-	      int resultadoEsperado= 1; 
-
-	      int resultadoReal = calc.dividir(nro1, nro2); 
-
-	      assertEquals(resultadoEsperado, resultadoReal); 
-
-	  } 
-
-	     
+        assertEquals(resultadoEsperado, resultadoReal, 0.001);
+    }
+    
+    @Test
+    public void testeSomar5com5() {
+        double nro1 = 5;
+        double nro2 = 5;
+        Calculadora calc = new Calculadora();
+        double resultadoEsperado = 10;
+        double resultadoReal = calc.somar(nro1, nro2);
+        assertEquals(resultadoEsperado, resultadoReal, 0);
+    }
 }
