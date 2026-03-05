@@ -14,6 +14,7 @@ public class CalculadoraTeste {
 	
 	@Before
 	public void preparaTeste() {
+		contadorTeste = contadorTeste + 1;
     	System.out.print("iniciando o teste numero: ");
 		System.out.println(contadorTeste);
 		nomeTeste = "Multiplicar 3 por 3";
