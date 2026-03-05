@@ -93,7 +93,19 @@ public class CalculadoraTeste {
         double resultadoEsperado = 10;
         resultadoReal = calc.somar(nro1, nro2);
         assertEquals(resultadoEsperado, resultadoReal, 0);
-
+    }
+    @Test
+    public void testeDividir3com2( ) {
+    	nomeTeste = "Dividir 3 com 2";
+    	double nro1 = 3;
+    	double nro2 = 2;
+    	
+    	Calculadora calc = new Calculadora();
+    	
+    	double resultadoEsperado = 1.5;
+    	resultadoReal = calc.dividir(nro1, nro2);
+    	assertEquals(resultadoEsperado, resultadoReal, 0.1);
+    	
     }
     
     
